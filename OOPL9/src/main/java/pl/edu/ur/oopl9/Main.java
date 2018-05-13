@@ -1,21 +1,68 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pl.edu.ur.oopl9;
 
-/**
- *
- * @author maarchyl
- */
+//import java.util.Iterator;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Random;
+import java.util.TreeSet;
+
+//import java.util.Random;
+//import java.util.TreeSet;
+
+
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String[] args) {
-        // TODO code application logic here
-    }
+       
+       int a;
+        
+        Random losujLiczby = new Random();
+
+       TreeSet drzewo = new TreeSet <> ();
+        
+       for(int i = 0; i < 100; i++)
+
+            {
+               a = losujLiczby.nextInt(101);
+               drzewo.add(a);
+
+            }
+      Iterator it = drzewo.iterator();
+       
+      while (it.hasNext())
+           {
+              System.out.println(it.next() + " ");
+            }
+
+  
+    
+   
+   TreeSet drzewo2 = new TreeSet <> ();
+   
+
+    ArrayList<Samochod> samochody = new ArrayList<Samochod>();
+    Samochod s1 = new Samochod();
+    s1.setCena(3000);
+    s1.setMarka("Fiat");
+    s1.setNazwaSam("asdasd");
+    s1.setPredkosc(200);
+    samochody.add(s1);
+    
+    Samochod s2 = new Samochod();
+    s2.setCena(150000000);
+    s2.setMarka("Ferrari");
+    s2.setNazwaSam("Enzo");
+    s2.setPredkosc(350);
+    samochody.add(s2);
+    
+    samochody.get(0).getPredkosc();
+    samochody.get(0).getCena();
+    samochody.get(0).getNazwaSam();
+    samochody.get(0).getMarka();
+  }
+    
+    
     
 }
